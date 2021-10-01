@@ -8,8 +8,86 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Center(
-        child: Text('test'),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            // MAIN COLUMN
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 32, left: 32, right: 32),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Hi, I'm Armanda Arif",
+                      style: blueText.copyWith(fontSize: 18, fontWeight: bold),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Full Stack\nFastAPI - Flutter Developer',
+                      style: whiteText.copyWith(fontSize: 18, fontWeight: bold),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 16),
+              Container(
+                //PHOTO HERE
+                margin: EdgeInsets.symmetric(horizontal: 32),
+                width: double.infinity,
+                height: 123,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                    color: Colors.grey),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 32, right: 32, top: 18),
+                height: 102,
+                width: double.infinity,
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit tristique tellus enim nec amet mauris nascetur viverra sodales. Turpis amet molestie quam ullamcorper. Feugiat lectus sed tem.',
+                  style: whiteText.copyWith(fontWeight: regular),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              SizedBox(height: 18),
+              Container(
+                margin: EdgeInsets.only(top: 32, left: 32, right: 32),
+                width: double.infinity,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 136,
+                      height: 44,
+                      child: TextButton(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.email,
+                              color: kWhiteColor,
+                            ),
+                            Text(
+                              'Email Me',
+                              style: whiteText.copyWith(
+                                  fontSize: 14, fontWeight: medium),
+                            ),
+                          ],
+                        ),
+                        style:
+                            TextButton.styleFrom(backgroundColor: kBlueColor),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
