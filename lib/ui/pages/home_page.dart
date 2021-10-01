@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/shared/theme.dart';
+import 'package:portofolio/ui/widgets/contact_button.dart';
+import 'package:portofolio/ui/widgets/project_item.dart';
+import 'package:portofolio/ui/widgets/text_heading.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -52,39 +55,19 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 18),
-              Container(
-                margin: EdgeInsets.only(top: 32, left: 32, right: 32),
-                width: double.infinity,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 136,
-                      height: 44,
-                      child: TextButton(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.email,
-                              color: kWhiteColor,
-                            ),
-                            Text(
-                              'Email Me',
-                              style: whiteText.copyWith(
-                                  fontSize: 14, fontWeight: medium),
-                            ),
-                          ],
-                        ),
-                        style:
-                            TextButton.styleFrom(backgroundColor: kBlueColor),
-                        onPressed: () {},
-                      ),
-                    ),
-                  ],
-                ),
-              )
+              ContactButton(),
+              SizedBox(height: 32),
+              TextHeading(text: 'Selected Projects'),
+              ProjectItem(
+                itemKind: 'web',
+                repositoryUrl: 'test',
+                itemUrl: 'test',
+              ),
+              ProjectItem(
+                itemKind: 'play',
+                repositoryUrl: 'test',
+                itemUrl: 'test',
+              ),
             ],
           ),
         ),
