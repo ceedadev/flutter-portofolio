@@ -41,53 +41,55 @@ class ProjectItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 32),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            margin: EdgeInsets.only(top: 18),
-            width: double.infinity,
-            height: 180,
-            // TODO: ADD IMAGE AND URL FOR CONTAINER BOX
-            decoration: BoxDecoration(color: Colors.grey),
-          ),
-          SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    width: 24,
-                    height: 24,
-                    margin: EdgeInsets.only(right: 8),
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/icon_git.png'),
+      child: Container(
+        margin: EdgeInsets.only(bottom: 18),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: double.infinity,
+              height: 180,
+              // TODO: ADD IMAGE AND URL FOR CONTAINER BOX
+              decoration: BoxDecoration(color: Colors.grey),
+            ),
+            SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 24,
+                      height: 24,
+                      margin: EdgeInsets.only(right: 8),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/icon_git.png'),
+                        ),
                       ),
                     ),
-                  ),
-                  Text('View Repository', style: whiteText)
-                ],
-              ),
-              Row(
-                children: [
-                  Container(
-                    width: 24,
-                    height: 24,
-                    margin: EdgeInsets.only(right: 8),
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(itemIcon()),
+                    Text('View Repository', style: whiteText)
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: 24,
+                      height: 24,
+                      margin: EdgeInsets.only(right: 8),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(itemIcon()),
+                        ),
                       ),
                     ),
-                  ),
-                  Text(itemText(), style: whiteText)
-                ],
-              ),
-            ],
-          )
-        ],
+                    Text(itemText(), style: whiteText)
+                  ],
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

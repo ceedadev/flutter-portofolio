@@ -12,6 +12,7 @@ class TextHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 32, bottom: 18),
       padding: EdgeInsets.symmetric(horizontal: 32),
       child: Text(
         text,

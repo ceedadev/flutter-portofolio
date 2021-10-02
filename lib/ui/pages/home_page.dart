@@ -56,7 +56,6 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(height: 18),
               ContactButton(),
-              SizedBox(height: 32),
               TextHeading(text: 'Selected Projects'),
               ProjectItem(
                 itemKind: 'web',
@@ -68,6 +67,7 @@ class HomePage extends StatelessWidget {
                 repositoryUrl: 'test',
                 itemUrl: 'test',
               ),
+              TextHeading(text: 'Tools and Skills'),
             ],
           ),
         ),
