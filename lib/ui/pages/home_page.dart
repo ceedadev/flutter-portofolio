@@ -34,24 +34,40 @@ class HomePage extends StatelessWidget {
               TextHeading(text: 'Tools and Skills'),
               Tools(),
               SkillItem(
-                title: 'Dart',
-                subtitle: 'Intermediate',
-                percentage: 0.75,
-              ),
+                  title: 'Dart', subtitle: 'Intermediate', percentage: 0.75),
               SkillItem(
-                title: 'Flutter',
-                subtitle: 'Experienced',
-                percentage: 0.8,
-              ),
+                  title: 'Flutter', subtitle: 'Experienced', percentage: 0.8),
               SkillItem(
-                title: 'Python',
-                subtitle: 'Experienced',
-                percentage: 0.9,
-              ),
+                  title: 'Python', subtitle: 'Experienced', percentage: 0.9),
               SkillItem(
-                title: 'FastAPI',
-                subtitle: 'Learning',
-                percentage: 0.6,
+                  title: 'FastAPI', subtitle: 'Learning', percentage: 0.6),
+              TextHeading(text: 'Certificates'),
+              Container(
+                height: 340,
+                child: ListView(
+                  padding: EdgeInsets.only(left: 32),
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(right: 18),
+                      width: 221,
+                      height: 311,
+                      decoration: BoxDecoration(color: Colors.grey),
+                      child: Center(
+                        child: Text('Certificate'),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 18),
+                      width: 221,
+                      height: 311,
+                      decoration: BoxDecoration(color: Colors.grey),
+                      child: Center(
+                        child: Text('Certificate'),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
