@@ -9,7 +9,7 @@ class ContactButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 18, left: 32, right: 32),
+      margin: EdgeInsets.symmetric(horizontal: 32, vertical: 18),
       width: double.infinity,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,7 +34,10 @@ class ContactButton extends StatelessWidget {
                 ],
               ),
               style: TextButton.styleFrom(backgroundColor: kBlueColor),
-              onPressed: () {},
+              onPressed: () {
+                //TODO : ADD FUNCTION HERE
+                print('pressed');
+              },
             ),
           ),
           Container(
